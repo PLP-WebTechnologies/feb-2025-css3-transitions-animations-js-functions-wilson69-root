@@ -1,0 +1,106 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+}
+
+/* Animated title */
+@keyframes titleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animated-title {
+    animation: titleFloat 3s ease-in-out infinite;
+}
+
+/* Animation box */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animation-box {
+    width: 100px;
+    height: 100px;
+    margin: 2rem auto;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 10px;
+    animation: rotate 3s linear infinite;
+}
+
+/* Speed variations */
+.animation-box.slow { animation-duration: 5s; }
+.animation-box.normal { animation-duration: 3s; }
+.animation-box.fast { animation-duration: 1s; }
+
+/* Theme styles */
+body.light {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Button styles and animation */
+.theme-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.05);
+}
+
+/* Click animation */
+@keyframes clickEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+.theme-button.clicked {
+    animation: clickEffect 0.3s ease;
+}
+
+/* Theme-specific button styles */
+body.light .theme-button {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+body.dark .theme-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Content transition */
+.content {
+    margin-top: 2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.content:hover {
+    opacity: 1;
+}

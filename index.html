@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations & LocalStorage Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animated-title">Theme Switcher Demo</h1>
+        <button id="themeBtn" class="theme-button">Switch Theme</button>
+        <div class="content">
+            <p>Click the button to switch themes and watch the animation!</p>
+            <div class="animation-box"></div>
+            <div class="preferences">
+                <label>
+                    Animation Speed:
+                    <select id="animationSpeed">
+                        <option value="slow">Slow</option>
+                        <option value="normal">Normal</option>
+                        <option value="fast">Fast</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
